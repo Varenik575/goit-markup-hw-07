@@ -360,7 +360,6 @@ background-color: var(--pressed);
 
 .nav-link {
     position: relative;
-    
     padding-top: 24px;
     padding-bottom: 24px;
 
@@ -396,13 +395,13 @@ background-color: var(--pressed);
 }
 
 .address-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .address-item {
     font-size: 12px;
+    margin-bottom: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
 }
@@ -424,15 +423,17 @@ background-color: var(--pressed);
     .flex-container {
         column-gap: 332px;
     }
-    
+
+.address-list{
+    margin: auto;
+}
+
     .address-item {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin: auto;
     }
 
     .address-list {
         display: flex;
-        flex-direction: row;
         align-items: center;
         column-gap: 40px;
     }
