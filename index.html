@@ -40,13 +40,74 @@
                     
                             </nav>
 
-                            <button type="button" class="stack-menu-button">
+                            <button type="button" class="stack-menu-button js-open-menu" >
                             
                                 <svg class="stack-button-icon">
                                     <use href="./images/sprite.svg#icon-menu"></use>
                                 </svg>
                             
                             </button>
+
+                            <div class="mobile-menu js-menu-container" >
+                                
+                                <div class="mobile-menu-container">
+
+                                    <button class="mobile-menu-close-button js-close-menu" >
+                                        <svg class="mobile-menu-close-icon">
+                                            <use href="./images/sprite.svg#icon-cross"></use>
+                                        </svg>
+                                    </button>
+
+                                    <ul class="mobile-menu-list">
+                                        <li class="mobile-menu-item"><a href="./index.html">Studio</a></li>
+                                        <li class="mobile-menu-item"><a href="./portfolio.html">Portfolio</a></li>
+                                        <li class="mobile-menu-item"><a href="/">Contacts</a></li>
+                                    </ul>
+
+                                   <div class="mobile-flex-group">
+                                       <div class="mobile-address-group">
+                                            <a href="tel:+11(000)111-11-11" class="mobile-tel-link">+11 (000) 111-11-11</a>
+                                            <a href="mailto:info@devstudio.com" class="mobile-mail-link">info@devstudio.com</a>
+                                       </div>
+    
+                                        <ul class="mobile-menu-media-list">
+                                            <li>
+                                                <a href="" class="mobile-menu-media-item">
+                                                    <svg class="mobile-menu-media-icon">
+                                                        <use href="./images/sprite.svg#icon-instagram"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="" class="mobile-menu-media-item">
+                                                    <svg class="mobile-menu-media-icon">
+                                                        <use href="./images/sprite.svg#icon-twitter"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="" class="mobile-menu-media-item">
+                                                    <svg class="mobile-menu-media-icon">
+                                                        <use href="./images/sprite.svg#icon-facebook"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="" class="mobile-menu-media-item">
+                                                    <svg class="mobile-menu-media-icon">
+                                                        <use href="./images/sprite.svg#icon-linkedin"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        
+                                        </ul>
+                                   </div>
+                                    
+                                </div>
+                            </div>
                     
                             <address class="address-section">
                                 <ul class="address-list">
@@ -575,6 +636,8 @@
     <script src="./modal.js"></script>
 
     -->
+
+    <script src="./mobile-menu.js"></script>
     </body>
 
 </html>

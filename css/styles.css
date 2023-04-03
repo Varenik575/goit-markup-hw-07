@@ -81,6 +81,7 @@ body { /*BODY*/
 /*----------------( < 480px )----------------------------------------------*/
 
 .container {
+    width: 100%;
     padding-left: 16px;
     padding-right: 16px;
     margin-left: auto;
@@ -117,6 +118,7 @@ body { /*BODY*/
 
 .stack-menu-button {
     -webkit-tap-highlight-color: transparent;
+    line-height: 0;
 
     display: flex;
     align-items: center;
@@ -145,40 +147,196 @@ body { /*BODY*/
     fill: var(--primary-brand);
 }
 
-.nav-list {
-    display: none;
+
+.mobile-menu {
+    z-index: 10;
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--white);
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 
-.address-section {
-    display: none;
+.mobile-menu.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 428px;
+    padding-left: 40px;
+    padding-right: 35px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.mobile-menu-item {
+    -webkit-tap-highlight-color: transparent;
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+
+    margin-bottom: 40px;
+
+    transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-item:hover, .mobile-menu-item:focus, .mobile-menu-item:active {
+    color: var(--pressed);
+}
+
+.mobile-flex-group
+{
+    margin-top: auto;
+}
+.mobile-tel-link {
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    color: var(--primary-brand);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+
+  
+}
+
+.mobile-mail-link {
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+
+    margin-top: 40px;
+}
+
+.mobile-menu-media-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.mobile-menu-media-item {
+    -webkit-tap-highlight-color: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 8px;
+    background-color: var(--primary-brand);
+
+    transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-media-item:is(:hover, :focus) {
+background-color: var(--pressed);
+}
+
+.mobile-menu-media-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--light);
+
+}
+   
+
+.mobile-menu-close-button {
+    -webkit-tap-highlight-color: transparent;
+    
+    position: absolute;
+        top: 24px;
+        right: 24px;
+    
+        width: 24px;
+        height: 24px;
+    
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    
+        background-color: var(--accent);
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        transition-property: background-color, border-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close-button.stack-menu-button:is(:hover, :focus) {
+    background-color: var(--pressed);
+        border-color: var(--pressed);
+}
+
+.mobile-menu-close-icon {
+    width: 8px;
+        height: 8px;
+    
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close-button.stack-menu-button:is(:hover, :focus) > .mobile-menu-close-icon {
+    fill: var(--white);
 }
 
 
 
 
-@media screen and (min-width = 480px) {
+@media screen and (max-width: 767.5px) {
+
+    .nav-list {
+        display: none;
+    }
+
+    .address-section {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) {
 
 .container {
-    width: 428px;
-}
-
-.address-section {
-    display: flex;
+    max-width: 428px;
 }
 
 }
 
-@media screen and (min-width = 768px) {
+@media screen and (min-width: 768px) {
     
 .container {
-     width: 768px;
+     max-width: 768px;
 }
 
 }
 
-@media screen and (min-width = 1200px) {
+@media screen and (min-width: 1200px) {
 
     .container {
-        width: 1158px;
+        max-width: 1158px;
     }
 }
