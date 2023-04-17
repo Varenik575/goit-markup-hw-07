@@ -176,19 +176,15 @@ body { /*BODY*/
     background-color: var(--white);
 
     visibility: hidden;
-    opacity: 0;
     pointer-events: none;
 
     transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, visibility 250ms ease-in-out;
 }
   
 .mobile-menu.is-open {
     visibility: visible;
-    opacity: 1;
     pointer-events: auto;
-    
-    transition: transform 250ms ease-in-out;
     transform: translateX(0);
     }
    
@@ -749,7 +745,7 @@ text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    width: calc(100% - 32px);
     max-width: 392px;
     max-height: 586px;
 
